@@ -1,6 +1,6 @@
 # Antigravity Skills for Biomedical Research
 
-**Agentic skills for structure-based drug discovery** — tell
+**Four agentic skills for structure-based drug discovery** — tell
 [Antigravity](https://github.com/google-deepmind/science-skills) what you need
 in plain language, and it handles the computational pipeline from protein
 structure to docked, filtered, and optimised compounds.
@@ -68,7 +68,7 @@ does.
 
 ---
 
-## The Five Skills
+## The Four Skills
 
 ```
                          ┌────────────────────────┐
@@ -92,7 +92,10 @@ does.
 | **Compound Screening** | You ask about compounds, actives, docking, binding affinity, drug-likeness or ADMET filtering |
 | **Compound Synthesis** | You want new molecules designed or an existing lead optimised |
 | **MD Simulation** | You want a molecular dynamics setup or a cluster submission script |
-| **Drug Discovery Wizard** | You want the end-to-end pipeline — the wizard delegates to the four skills above |
+
+A fifth component, the **Drug Discovery Wizard**, is not a skill itself — it is
+the orchestrator that chains the four skills above into a multi-stage pipeline
+when you ask for the end-to-end workflow.
 
 Each skill's full instructions live in `.agents/skills/<skill>/SKILL.md`. The
 agent reads these automatically when it selects a skill. You do not need to read
@@ -289,11 +292,12 @@ a batch job.
 - **SLURM script generation** — for GROMACS MD, REINVENT, AutoDock Vina batch
   screening, ColabFold and AlphaFold2
 
-### Drug Discovery Wizard
+### Drug Discovery Wizard (Orchestrator)
 
-Orchestrates the four skills above across seven pipeline stages. It
-**delegates; it does not reimplement** — every stage calls the same code the
-individual skills call, so a correction reaches all callers.
+The wizard is not a skill — it is the orchestrator that chains the four skills
+above across seven pipeline stages. It **delegates; it does not reimplement** —
+every stage calls the same code the individual skills call, so a correction
+reaches all callers.
 
 **Just ask Antigravity:**
 - *"Run the full drug discovery pipeline for PDB 6HEZ"*
