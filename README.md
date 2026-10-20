@@ -22,10 +22,10 @@ selects the right skill, runs the pipeline, and returns structured results.
 
 | Skill | Description |
 |---|---|
-| [**Target Preparation**](target_preparation/) | Fetch structures from RCSB PDB or AlphaFold DB, predict from sequence with ESMFold, clean receptors, convert to PDBQT, assess model confidence, define the docking search box |
-| [**Compound Screening**](compound_screening/) | Query ChEMBL, COCONUT and ZINC for compounds; dock with AutoDock Vina; two-tier ADMET screening (Lipinski, Veber, Egan, Ghose, Muegge); PAINS, Brenk and aggregator alerts |
-| [**Compound Synthesis**](compound_synthesis/) | De novo design, scaffold hopping, R-group replacement, linker design, transfer learning and multi-objective reinforcement learning with REINVENT 4 |
-| [**MD Simulation**](md_simulation/) | GROMACS workflows and MDP files with force-field-aware non-bonded settings; MDP validation; SLURM scripts for MD, REINVENT, Vina, ColabFold and AlphaFold2 |
+| [**Target Preparation**](skills/target_preparation/) | Fetch structures from RCSB PDB or AlphaFold DB, predict from sequence with ESMFold, clean receptors, convert to PDBQT, assess model confidence, define the docking search box |
+| [**Compound Screening**](skills/compound_screening/) | Query ChEMBL, COCONUT and ZINC for compounds; dock with AutoDock Vina; two-tier ADMET screening (Lipinski, Veber, Egan, Ghose, Muegge); PAINS, Brenk and aggregator alerts |
+| [**Compound Synthesis**](skills/compound_synthesis/) | De novo design, scaffold hopping, R-group replacement, linker design, transfer learning and multi-objective reinforcement learning with REINVENT 4 |
+| [**MD Simulation**](skills/md_simulation/) | GROMACS workflows and MDP files with force-field-aware non-bonded settings; MDP validation; SLURM scripts for MD, REINVENT, Vina, ColabFold and AlphaFold2 |
 
 ## Installation
 
