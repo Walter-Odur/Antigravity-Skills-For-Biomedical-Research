@@ -71,19 +71,20 @@ does.
 ## The Four Skills
 
 ```
-                         ┌────────────────────────┐
-                         │  drug-discovery-wizard  │
-                         │    (orchestrator)       │
-                         └───────────┬────────────┘
-                                     │ delegates to
-             ┌───────────┬───────────┼───────────┬───────────┐
-             ▼           ▼           ▼           ▼           ▼
-     ┌──────────┐ ┌────────────┐ ┌────────┐ ┌────────┐ ┌────────┐
-     │  target  │ │ compound   │ │compound│ │  md    │ │ ADMET  │
-     │  prep    │→│ screening  │→│synthesis│→│  sim   │ │ tiers  │
-     └──────────┘ └────────────┘ └────────┘ └────────┘ └────────┘
-       PDB/AF2     ChEMBL/ZINC   REINVENT 4  GROMACS    RDKit
-       ESMFold     COCONUT/Vina              MDP gen    2-tier
+                         ┌──────────────────────────┐
+                         │   drug-discovery-wizard   │
+                         │      (orchestrator)       │
+                         └────────────┬─────────────┘
+                                      │ delegates to
+              ┌───────────┬───────────┼───────────┐
+              ▼           ▼           ▼           ▼
+      ┌──────────┐ ┌────────────┐ ┌──────────┐ ┌──────────┐
+      │  target  │ │ compound   │ │ compound │ │    md    │
+      │   prep   │→│ screening  │→│ synthesis│→│   sim    │
+      └──────────┘ └────────────┘ └──────────┘ └──────────┘
+        PDB/AF2     ChEMBL/ZINC    REINVENT 4    GROMACS
+        ESMFold     COCONUT/Vina                 MDP gen
+                    ADMET 2-tier
 ```
 
 | Skill | When Antigravity uses it |
