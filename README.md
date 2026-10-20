@@ -23,15 +23,17 @@ time.
 ## Getting started
 
 1. Install [Google Antigravity](https://antigravity.google)
-2. Clone this repo into your Antigravity workspace:
+2. Clone this repo and move the `.agents/` folder into your workspace:
 
 ```bash
 git clone https://github.com/Walter-Odur/Antigravity-Skills-For-Biomedical-Research.git
+cp -r Antigravity-Skills-For-Biomedical-Research/.agents /path/to/your/workspace/
 ```
 
-3. Start prompting.
+3. Open your workspace in Antigravity and start prompting.
 
-The skills live in `.agents/skills/` so Antigravity discovers them automatically.
+Antigravity discovers skills from the `.agents/skills/` directory at the root of
+your workspace.
 
 ## Skills
 
